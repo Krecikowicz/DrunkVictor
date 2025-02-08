@@ -34,7 +34,7 @@ public class WhiteLadyMovement : MonoBehaviour
 
         if (distance <= stopDistance)
         {
-            //EndGame2();
+            EndGame2();
             return;
         }
 
@@ -42,7 +42,7 @@ public class WhiteLadyMovement : MonoBehaviour
 
     public void EndGame2()
     {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(3);
     }
 
 }

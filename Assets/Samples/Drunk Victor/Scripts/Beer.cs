@@ -40,9 +40,9 @@ public class Beer : MonoBehaviour
 
         if (drunkMeter.sliderValue < 50)
         {
-            drunkMeter.sliderValue += 10f;
+            drunkMeter.sliderValue += 15f;
             Debug.Log("BEER");
-            moveProvider.moveSpeed += 1f;
+            moveProvider.moveSpeed += 1.5f;
 
         }
     }

@@ -43,7 +43,7 @@ public class DrunkMeter : MonoBehaviour
 
         if (currentThreshold < lastSpeedChange) // Jeśli osiągnęliśmy nowy niższy próg
         {
-            moveProvider.moveSpeed = Mathf.Clamp(moveProvider.moveSpeed - 1, 2.5f, 10); // Zmniejszamy speed, ale nie schodzimy poniżej 1
+            moveProvider.moveSpeed = Mathf.Clamp(moveProvider.moveSpeed - 1.5f, 2.5f, 10); // Zmniejszamy speed, ale nie schodzimy poniżej 1
             lastSpeedChange = currentThreshold; // Aktualizujemy ostatni zmieniony próg
             Debug.Log("Nowa prędkość: " + moveProvider.moveSpeed);
         }

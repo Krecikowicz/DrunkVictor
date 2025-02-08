@@ -39,14 +39,14 @@ public class DroneMovement : MonoBehaviour
         // If the drone is close enough to the player, stop moving and trigger the end game logic
         if (distance <= stopDistance)
         {
-            //EndGame();
+            EndGame();
             return;
         }
     }
 
     public void EndGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
     }
 }
 
