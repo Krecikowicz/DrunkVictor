@@ -36,26 +36,27 @@ public class Cigarette : MonoBehaviour
 
     public void Smoking()
     {
-        Debug.Log("Smoke");
-        smoke.SetActive(true);
+        if (smoke != null)
+        {
+            Debug.Log("Smoke");
+            smoke.SetActive(true);
+            particleSystem.Play();
+        }
 
         if (particleSystem.isPlaying)
         {
-            // Jeśli system cząsteczek jest odtwarzany, zaczynamy licznik czasu
             StartCoroutine(StopParticleAfterTime(playDuration));
         }
     }
 
     IEnumerator StopParticleAfterTime(float time)
     {
-        // Czekaj przez określoną ilość czasu
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(3f);
 
-        // Zatrzymanie systemu cząsteczek
         particleSystem.Stop();
 
-        // Ukrycie obiektu, jeśli chcesz, aby system cząsteczek zniknął
         smoke.SetActive(false);
+        particleSystem.Stop();
     }
 
 
@@ -65,15 +66,16 @@ public class Cigarette : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Gracz wszedł w dym!");
+            whiteLady.SetActive(false);
 
             // Sprawdź, czy system cząsteczek nie jest już aktywowany
             if (!particleSystem.isPlaying)
             {
                 particleSystem.Play(); // Uruchomienie systemu cząsteczek
+                whiteLady.SetActive(false);
             }
 
-            // Uruchomienie korutyny, która poczeka 3 sekundy, a potem dezaktywuje dym
-            StartCoroutine(DeactivateSmokeAfterDelay());
+            whiteLady.SetActive(false);
         }
     }
 
