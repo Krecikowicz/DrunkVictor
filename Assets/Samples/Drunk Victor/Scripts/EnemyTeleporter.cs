@@ -1,58 +1,54 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTeleporter : MonoBehaviour
+public class EnemyTeleportAndDropBrick : MonoBehaviour
 {
-    public Transform[] teleportPoints; // Array of teleport points
-    public GameObject brickPrefab; // Prefab for the brick to drop
-    public float teleportInterval = 5f; // Time between teleports
-    public float brickSpawnDistance = 1f; // Distance in front of the enemy to spawn the brick
-    public Vector3 offset = new Vector3(5, 0, 0);
-
-    private Vector3 lastPosition; // To track the last position before teleport
+    public GameObject enemy; // Reference to the enemy GameObject
+    public GameObject brickPrefab; // Reference to the brick prefab
+    public GameObject[] emptyObjects; // Array to store references to empty GameObjects (target teleport positions)
+    public float dropDistance = 2f; // Distance in front of the enemy to drop the brick
+    public float teleportCooldown = 3f; // Cooldown before the next teleport
 
     private void Start()
     {
-        lastPosition = transform.position; // Initialize last position
-        StartCoroutine(TeleportRoutine());
+        StartCoroutine(TeleportAndDropRoutine());
     }
 
-    private IEnumerator TeleportRoutine()
+    private IEnumerator TeleportAndDropRoutine()
     {
         while (true)
         {
-            yield return new WaitForSeconds(teleportInterval);
+            TeleportEnemy();
+            DropBrick();
 
-            // Drop a brick in front of the enemy at its LAST position before teleport
-            DropBrickInFront();
-
-            // Teleport to a random point AFTER dropping the brick
-            Transform randomPoint = teleportPoints[Random.Range(0, teleportPoints.Length)];
-            lastPosition = transform.position; // Update the last position before teleport
-            transform.position = randomPoint.position;
+            // Wait for the cooldown before teleporting again
+            yield return new WaitForSeconds(teleportCooldown);
         }
     }
 
-    private void DropBrickInFront()
+    private void TeleportEnemy()
     {
-        if (brickPrefab != null)
+        // Check if we have any empty objects in the array
+        if (emptyObjects.Length == 0)
         {
-            // Calculate the position in front of the enemy based on the LAST position before teleport
-            Vector3 spawnPosition = lastPosition + transform.forward * brickSpawnDistance;
-
-            // Spawn the brick at the calculated position
-            GameObject brick = Instantiate(brickPrefab, spawnPosition, Quaternion.identity);
-
-            // Ensure the brick has a Rigidbody for gravity
-            Rigidbody brickRigidbody = brick.GetComponent<Rigidbody>();
-            if (brickRigidbody == null)
-            {
-                brickRigidbody = brick.AddComponent<Rigidbody>();
-            }
-
-            // Optional: Add a small force to make the brick fall more naturally
-            brickRigidbody.AddForce(Vector3.down * 2f, ForceMode.Impulse);
+            Debug.LogWarning("No empty objects assigned for teleportation.");
+            return;
         }
+
+        // Select a random empty object from the array
+        int randomIndex = Random.Range(0, emptyObjects.Length);
+        Vector3 teleportPosition = emptyObjects[randomIndex].transform.position;
+
+        // Teleport the enemy to the selected empty object
+        enemy.transform.position = new Vector3(teleportPosition.x, enemy.transform.position.y, teleportPosition.z);
+    }
+
+    private void DropBrick()
+    {
+        // Calculate the position in front of the enemy
+        Vector3 dropPosition = enemy.transform.position + enemy.transform.forward * dropDistance;
+
+        // Instantiate the brick prefab at the drop position
+        Instantiate(brickPrefab, dropPosition, Quaternion.identity);
     }
 }
