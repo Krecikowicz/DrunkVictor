@@ -976,6 +976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e1dd4d0f9d856b4e96673b75bb8d0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drunkMeter: {fileID: 1549799476}
   controllerNode: 5
   slider: {fileID: 683174200}
 --- !u!114 &621731895
@@ -1460,7 +1461,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 50
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1591,6 +1592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e1dd4d0f9d856b4e96673b75bb8d0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drunkMeter: {fileID: 1549799476}
   controllerNode: 5
   slider: {fileID: 683174200}
 --- !u!114 &685274051
@@ -7885,6 +7887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e1dd4d0f9d856b4e96673b75bb8d0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drunkMeter: {fileID: 1549799476}
   controllerNode: 5
   slider: {fileID: 683174200}
 --- !u!114 &1613775684
@@ -8213,6 +8216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e1dd4d0f9d856b4e96673b75bb8d0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drunkMeter: {fileID: 1549799476}
   controllerNode: 5
   slider: {fileID: 683174200}
 --- !u!114 &1803374408

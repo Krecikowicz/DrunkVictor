@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Beer : MonoBehaviour
 {
+    public DrunkMeter drunkMeter;
 
     public XRNode controllerNode; 
     public Slider slider;
@@ -35,9 +36,9 @@ public class Beer : MonoBehaviour
     {
         Debug.Log("beer");
 
-        if (slider.value < slider.maxValue)
+        if (drunkMeter.sliderValue < 50)
         {
-            slider.value += 10f;
+            drunkMeter.sliderValue += 10f;
             Debug.Log("BEER");
 
         }

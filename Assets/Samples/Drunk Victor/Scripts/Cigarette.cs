@@ -36,6 +36,7 @@ public class Cigarette : MonoBehaviour
 
     public void Smoking()
     {
+        Debug.Log("Smoke");
         smoke.SetActive(true);
 
         if (particleSystem.isPlaying)
