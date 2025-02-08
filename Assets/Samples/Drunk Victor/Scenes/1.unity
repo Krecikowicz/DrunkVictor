@@ -977,6 +977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drunkMeter: {fileID: 1549799476}
+  moveProvider: {fileID: 549890607}
   controllerNode: 5
   slider: {fileID: 683174200}
 --- !u!114 &621731895
@@ -1593,6 +1594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drunkMeter: {fileID: 1549799476}
+  moveProvider: {fileID: 549890607}
   controllerNode: 5
   slider: {fileID: 683174200}
 --- !u!114 &685274051
@@ -7546,6 +7548,7 @@ MonoBehaviour:
   whiteLady: {fileID: 166812655}
   slider: {fileID: 683174200}
   decayRate: 0.5
+  moveProvider: {fileID: 549890607}
   sliderValue: 0
 --- !u!1001 &1552239251
 PrefabInstance:
@@ -7888,6 +7891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drunkMeter: {fileID: 1549799476}
+  moveProvider: {fileID: 549890607}
   controllerNode: 5
   slider: {fileID: 683174200}
 --- !u!114 &1613775684
@@ -8217,6 +8221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drunkMeter: {fileID: 1549799476}
+  moveProvider: {fileID: 549890607}
   controllerNode: 5
   slider: {fileID: 683174200}
 --- !u!114 &1803374408

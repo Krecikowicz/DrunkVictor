@@ -2,10 +2,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class Beer : MonoBehaviour
 {
     public DrunkMeter drunkMeter;
+    public DynamicMoveProvider moveProvider;
 
     public XRNode controllerNode; 
     public Slider slider;
@@ -40,6 +42,7 @@ public class Beer : MonoBehaviour
         {
             drunkMeter.sliderValue += 10f;
             Debug.Log("BEER");
+            moveProvider.moveSpeed += 1f;
 
         }
     }
