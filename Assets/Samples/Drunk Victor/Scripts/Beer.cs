@@ -8,8 +8,7 @@ public class Beer : MonoBehaviour
 
     public XRNode controllerNode; 
     public Slider slider;
-
-    private InputDevice device;
+    public InputDevice device;
     private bool isPressingButton = false;
 
     void Start()
@@ -24,24 +23,12 @@ public class Beer : MonoBehaviour
             device = InputDevices.GetDeviceAtXRNode(controllerNode); 
         }
 
-        bool buttonPressed = false;
-        if (device.TryGetFeatureValue(CommonUsages.triggerButton, out buttonPressed) && buttonPressed)
-        {
-            if (!isPressingButton) 
-            {
-                isPressingButton = true;
-                IncreaseSliderValue();
-            }
-        }
-        else
-        {
-            isPressingButton = false;
-        }
     }
 
     public void Destroyy()
     {
         Destroy(gameObject);
+        IncreaseSliderValue();
     }
 
     void IncreaseSliderValue()
