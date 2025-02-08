@@ -8,6 +8,7 @@ public class Cigarette : MonoBehaviour
     public XRNode controllerNode;
     public InputDevice device;
     public GameObject smoke;
+    public GameObject whiteLady;
     
 
     void Start()
@@ -33,7 +34,7 @@ public class Cigarette : MonoBehaviour
     void Smoking()
     {
         smoke.SetActive(true);
-        StartCoroutine(SmokeTime(5f));
+        StartCoroutine(SmokeTime(3f));
     } 
 
     IEnumerator SmokeTime(float duration)
@@ -41,5 +42,12 @@ public class Cigarette : MonoBehaviour
         yield return new WaitForSeconds(duration);
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            whiteLady.SetActive(false);
+        }
+    }
+
 }
