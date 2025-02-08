@@ -9,7 +9,7 @@ public class Beer : MonoBehaviour
     public XRNode controllerNode; 
     public Slider slider;
     public InputDevice device;
-    private bool isPressingButton = false;
+
 
     void Start()
     {
@@ -33,9 +33,13 @@ public class Beer : MonoBehaviour
 
     void IncreaseSliderValue()
     {
+        Debug.Log("beer");
+
         if (slider.value < slider.maxValue)
         {
-            slider.value += 10f; 
+            slider.value += 10f;
+            Debug.Log("BEER");
+
         }
     }
 
