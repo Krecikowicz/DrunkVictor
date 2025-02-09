@@ -19,6 +19,11 @@ public class MainMenu : MonoBehaviour
     public void Difficulty()
     {
         //difficulty
-    } 
+    }
+
+    public void StartOver()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
 
 }

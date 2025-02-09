@@ -13,9 +13,9 @@ public class NextLevel : MonoBehaviour
         SceneManager.LoadSceneAsync(4);
     }
 
-    public void NextLevel5()
+    public void NextLevel2()
     {
-        SceneManager.LoadSceneAsync(5);
+        SceneManager.LoadSceneAsync(2);
     }
 
     public void NextLevel6()
