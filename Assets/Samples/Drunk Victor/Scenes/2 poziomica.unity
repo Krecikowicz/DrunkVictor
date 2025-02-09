@@ -8263,7 +8263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3675cc97ba67b6f4187256cb300c6581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportInterval: 300
+  teleportInterval: 3000
   teleportLocations:
   - {fileID: 1437645314}
 --- !u!114 &1589080755
@@ -9195,7 +9195,7 @@ Transform:
   m_GameObject: {fileID: 1669871188}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.66, y: 5.23, z: -15.46}
+  m_LocalPosition: {x: -24.66, y: -0.39, z: 1.2}
   m_LocalScale: {x: 0.34390834, y: 0.34390834, z: 0.73359096}
   m_ConstrainProportionsScale: 0
   m_Children: []
