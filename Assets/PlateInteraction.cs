@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.SceneManagement;
 
 public class PlateInteraction : MonoBehaviour
 {
@@ -47,4 +48,15 @@ public class PlateInteraction : MonoBehaviour
             grabInteractable.selectEntered.RemoveListener(OnGrab);
         }
     }
-}
+
+        public void EndGame()
+        {
+            // Call the LoadSceneAfterDelay method after 5 seconds
+            Invoke("LoadSceneAfterDelay", 5f);
+        }
+
+        private void LoadSceneAfterDelay()
+        {
+            SceneManager.LoadSceneAsync(5); // Load scene with index 2
+        }
+    }

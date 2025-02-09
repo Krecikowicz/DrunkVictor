@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenu1 : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     public Button startButton;
     public Button DifficultyButton;
@@ -10,7 +10,7 @@ public class MainMenu1 : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadSceneAsync(7);
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void Exit()

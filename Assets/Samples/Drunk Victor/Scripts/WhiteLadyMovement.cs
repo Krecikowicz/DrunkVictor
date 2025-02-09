@@ -42,7 +42,7 @@ public class WhiteLadyMovement : MonoBehaviour
 
     public void EndGame2()
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(6);
     }
 
 }
