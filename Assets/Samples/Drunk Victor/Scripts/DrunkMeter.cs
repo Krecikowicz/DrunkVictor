@@ -4,6 +4,7 @@ using UnityEngine.XR;
 using Unity.VisualScripting;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 public class DrunkMeter : MonoBehaviour
@@ -30,6 +31,8 @@ public class DrunkMeter : MonoBehaviour
         AdjustSpeedBasedOnSlider();
 
         //Debug.Log("Slider value after decay: " + slider.value);
+
+        Drunk();
 
 
         WhiteLadyAppearance();
@@ -65,5 +68,12 @@ public class DrunkMeter : MonoBehaviour
         }
     }
 
+    public void Drunk()
+    {
+        if (sliderValue >= 50)
+        {
+            SceneManager.LoadSceneAsync(7);
+        }
+    }
 
 }

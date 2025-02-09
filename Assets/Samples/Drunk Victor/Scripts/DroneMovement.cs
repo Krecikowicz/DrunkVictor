@@ -39,7 +39,7 @@ public class DroneMovement : MonoBehaviour
 
     public void EndGame()
     {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(8);
     }
 }
 

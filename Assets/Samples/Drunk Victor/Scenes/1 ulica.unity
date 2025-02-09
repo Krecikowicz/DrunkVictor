@@ -2164,9 +2164,9 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Beer, Assembly-CSharp
-        m_MethodName: Destroyy
+      - m_Target: {fileID: 1549799477}
+        m_TargetAssemblyTypeName: NextLevel, Assembly-CSharp
+        m_MethodName: NextLevelll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3650,8 +3650,10 @@ MonoBehaviour:
   controllerNode: 5
   smoke: {fileID: 811941865}
   whiteLady: {fileID: 166812655}
+  player: {fileID: 1672260800}
   particleSystem: {fileID: 811941868}
   playDuration: 3
+  spawnDistance: 2
 --- !u!1001 &506678209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4248,8 +4250,10 @@ MonoBehaviour:
   controllerNode: 5
   smoke: {fileID: 811941865}
   whiteLady: {fileID: 166812655}
+  player: {fileID: 1672260800}
   particleSystem: {fileID: 811941868}
   playDuration: 3
+  spawnDistance: 2
 --- !u!114 &622950620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10094,8 +10098,10 @@ MonoBehaviour:
   controllerNode: 5
   smoke: {fileID: 811941865}
   whiteLady: {fileID: 166812655}
+  player: {fileID: 1672260800}
   particleSystem: {fileID: 811941868}
   playDuration: 3
+  spawnDistance: 2
 --- !u!1001 &863541911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10387,8 +10393,10 @@ MonoBehaviour:
   controllerNode: 5
   smoke: {fileID: 811941865}
   whiteLady: {fileID: 166812655}
+  player: {fileID: 1672260800}
   particleSystem: {fileID: 811941868}
   playDuration: 3
+  spawnDistance: 2
 --- !u!1 &895960627 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -10810,8 +10818,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 67b6c70c3ed7bd4418649c64b2f37275, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1067767640}
   m_SourcePrefab: {fileID: 100100000, guid: 67b6c70c3ed7bd4418649c64b2f37275, type: 3}
+--- !u!1 &1067767639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 67b6c70c3ed7bd4418649c64b2f37275, type: 3}
+  m_PrefabInstance: {fileID: 1067767638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1067767640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067767639}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.18208398, y: 0.17735827, z: 0.4455942}
+  m_Center: {x: 0.0012730332, y: -0.0017352501, z: 0.22177786}
 --- !u!1 &1078447997
 GameObject:
   m_ObjectHideFlags: 0
@@ -13497,8 +13534,10 @@ MonoBehaviour:
   controllerNode: 5
   smoke: {fileID: 811941865}
   whiteLady: {fileID: 166812655}
+  player: {fileID: 1672260800}
   particleSystem: {fileID: 811941868}
   playDuration: 3
+  spawnDistance: 2
 --- !u!1001 &1532418869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13790,8 +13829,10 @@ MonoBehaviour:
   controllerNode: 5
   smoke: {fileID: 811941865}
   whiteLady: {fileID: 166812655}
+  player: {fileID: 1672260800}
   particleSystem: {fileID: 811941868}
   playDuration: 3
+  spawnDistance: 2
 --- !u!1 &1549799473
 GameObject:
   m_ObjectHideFlags: 0
@@ -13802,6 +13843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1549799475}
   - component: {fileID: 1549799476}
+  - component: {fileID: 1549799477}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13841,6 +13883,18 @@ MonoBehaviour:
   decayRate: 0.5
   moveProvider: {fileID: 549890607}
   sliderValue: 0
+--- !u!114 &1549799477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549799473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a13d6b9929504458fa9c3b1f92a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1552239251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15546,8 +15600,10 @@ MonoBehaviour:
   controllerNode: 5
   smoke: {fileID: 811941865}
   whiteLady: {fileID: 166812655}
+  player: {fileID: 1672260800}
   particleSystem: {fileID: 811941868}
   playDuration: 3
+  spawnDistance: 2
 --- !u!1001 &1759662819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15839,8 +15895,10 @@ MonoBehaviour:
   controllerNode: 5
   smoke: {fileID: 811941865}
   whiteLady: {fileID: 166812655}
+  player: {fileID: 1672260800}
   particleSystem: {fileID: 811941868}
   playDuration: 3
+  spawnDistance: 2
 --- !u!1001 &1762460993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19055,8 +19113,10 @@ MonoBehaviour:
   controllerNode: 5
   smoke: {fileID: 811941865}
   whiteLady: {fileID: 166812655}
+  player: {fileID: 1672260800}
   particleSystem: {fileID: 811941868}
   playDuration: 3
+  spawnDistance: 2
 --- !u!1001 &2069918025
 PrefabInstance:
   m_ObjectHideFlags: 0

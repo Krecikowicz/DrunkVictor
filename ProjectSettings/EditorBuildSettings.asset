@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Samples/Drunk Victor/Scenes/2 poziomica.unity
     guid: 037f529d99d25994299d7cdd0e82722e
   - enabled: 1
+    path: Assets/Samples/Drunk Victor/Scenes/Good Ending.unity
+    guid: dddc9e787bd96444c9882a4e8c4256b2
+  - enabled: 1
     path: Assets/Samples/Drunk Victor/Scenes/BIALA DAMA.unity
     guid: f47fc5ab4b99fb84687b447b74994532
   - enabled: 1

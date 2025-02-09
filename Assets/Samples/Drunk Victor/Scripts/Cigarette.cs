@@ -9,8 +9,10 @@ public class Cigarette : MonoBehaviour
     public InputDevice device;
     public GameObject smoke;
     public GameObject whiteLady;
+    public Transform player;
     public ParticleSystem particleSystem;
     public float playDuration = 3f;
+    public float spawnDistance = 2f;
 
 
     void Start()
@@ -40,6 +42,11 @@ public class Cigarette : MonoBehaviour
         {
             Debug.Log("Smoke");
             smoke.SetActive(true);
+
+            Vector3 spawnPosition = player.position + player.forward * spawnDistance;
+            spawnPosition.y = player.position.y;
+            Instantiate(smoke, spawnPosition, Quaternion.identity);
+
             particleSystem.Play();
         }
 
