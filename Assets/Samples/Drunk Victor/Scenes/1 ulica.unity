@@ -1990,7 +1990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9c42c59e739dc9478758eb9296a4db6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.932
+      value: 0.966
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9c42c59e739dc9478758eb9296a4db6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2051,6 +2051,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c9c42c59e739dc9478758eb9296a4db6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 230437579}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c9c42c59e739dc9478758eb9296a4db6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 230437583}
   m_SourcePrefab: {fileID: 100100000, guid: c9c42c59e739dc9478758eb9296a4db6, type: 3}
 --- !u!1 &230437577 stripped
 GameObject:
@@ -2256,6 +2259,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &230437583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230437577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1dd4d0f9d856b4e96673b75bb8d0a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drunkMeter: {fileID: 1549799476}
+  moveProvider: {fileID: 549890607}
+  controllerNode: 5
+  slider: {fileID: 683174200}
 --- !u!1001 &253686482
 PrefabInstance:
   m_ObjectHideFlags: 0

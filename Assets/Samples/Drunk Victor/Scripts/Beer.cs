@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+using UnityEngine.SceneManagement;
 
 public class Beer : MonoBehaviour
 {
@@ -45,6 +46,18 @@ public class Beer : MonoBehaviour
             moveProvider.moveSpeed += 1.5f;
 
         }
+    }
+
+    void IncreaseSliderValueForEpicBeer()
+    {
+        if (drunkMeter.sliderValue < 50)
+        {
+            drunkMeter.sliderValue += 50f;
+            moveProvider.moveSpeed += 1.5f;
+        }
+
+        SceneManager.LoadSceneAsync(3);
+
     }
 
 }
