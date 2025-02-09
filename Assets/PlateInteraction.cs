@@ -46,5 +46,7 @@ public class PlateInteraction : MonoBehaviour
         {
             grabInteractable.selectEntered.RemoveListener(OnGrab);
         }
+
     }
+
 }

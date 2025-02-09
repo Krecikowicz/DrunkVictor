@@ -9,17 +9,26 @@ EditorBuildSettings:
     path: Assets/Samples/Drunk Victor/Scenes/0 MainMenu.unity
     guid: aa6ca1d9c2e15f549a62dc3b1076eb18
   - enabled: 1
+    path: Assets/Samples/Drunk Victor/Scenes/cartoon1.unity
+    guid: 451111ae975e5fd44b88273fba9bf5f3
+  - enabled: 1
     path: Assets/Samples/Drunk Victor/Scenes/1 ulica.unity
     guid: af5b010925b759f4a9a92d14b84f1e81
+  - enabled: 1
+    path: Assets/Samples/Drunk Victor/Scenes/cartoon12.unity
+    guid: c12b6f3c692910d4aaf50f7f2f22951e
   - enabled: 1
     path: Assets/Samples/Drunk Victor/Scenes/2 poziomica.unity
     guid: 037f529d99d25994299d7cdd0e82722e
   - enabled: 1
-    path: Assets/Samples/Drunk Victor/Scenes/Ending1.unity
-    guid: a3d3076ec35d6df448a8a2436904a5a6
+    path: Assets/Samples/Drunk Victor/Scenes/BIALA DAMA.unity
+    guid: f47fc5ab4b99fb84687b447b74994532
   - enabled: 1
-    path: Assets/Samples/Drunk Victor/Scenes/Ending2.unity
-    guid: a4a865d79e2860141a82a9ea84fba47a
+    path: Assets/Samples/Drunk Victor/Scenes/Kac.unity
+    guid: e1122ea7f4e89d34499c74c2067217f4
+  - enabled: 1
+    path: Assets/Samples/Drunk Victor/Scenes/Policja.unity
+    guid: a416e5aa1c6966a4595a5abb0a66b02c
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d284395728a58854bb90755f0cc2fe2a, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

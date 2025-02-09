@@ -7,8 +7,8 @@ public class NextLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadSceneAsync(4);
+            SceneManager.LoadSceneAsync(3);
         }
-    }
+    } 
 
 }
